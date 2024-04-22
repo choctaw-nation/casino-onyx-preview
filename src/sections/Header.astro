@@ -1,0 +1,19 @@
+---
+import BGImage from "../components/BGImage.astro";
+import bgImage from "../assets/eblast/intro-bg.png";
+import CasinoLogo from "../components/CasinoLogo.astro";
+import GiftEventLogo from "../components/GiftEventLogo.astro";
+---
+
+<header class="position-relative overflow-y-hidden py-5">
+	<BGImage src={bgImage} loading="eager" />
+	<div class="container position-relative z-1 py-5 my-5">
+		<div class="row justify-content-center">
+			<div
+				class="col-10 col-lg-6 d-flex flex-column justify-content-center row-gap-5">
+				<GiftEventLogo type="standard" color="white" classes="mb-5" />
+				<CasinoLogo color="white" />
+			</div>
+		</div>
+	</div>
+</header>

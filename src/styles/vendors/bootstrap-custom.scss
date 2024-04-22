@@ -1,0 +1,85 @@
+// Required
+@import "bootstrap/scss/functions";
+
+$primary: #334041;
+$link-decoration: none;
+$border-width: 2px;
+
+$font-family-sans-serif: gill-sans-nova, "Helvetica Neue", "Noto Sans",
+  "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-size-root: 62.5%;
+$font-size-base: 1.6rem;
+
+/**
+* Minor Third Type Scale
+* @see https://typescale.com/
+*/
+
+$h1-font-size: $font-size-base * 2.986;
+$h2-font-size: $font-size-base * 2.488;
+$h3-font-size: $font-size-base * 2.074;
+$h4-font-size: $font-size-base * 1.728;
+$h5-font-size: $font-size-base * 1.44;
+$h6-font-size: $font-size-base * 1.2;
+
+$headings-font-weight: 600;
+$headings-font-family: $font-family-sans-serif;
+
+// ================================================
+
+/**
+* Spacing
+*/
+$grid-gutter-width: 2.4rem; // 24px
+$spacer: 1.6rem; // 16px
+
+$enable-dark-mode: false;
+
+@import "bootstrap/scss/variables";
+// @import "bootstrap/scss/variables-dark";
+$grid-gutter-width: 0;
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// Useful Bootstrap Utilities (Optional)
+@import "bootstrap/scss/bootstrap-reboot";
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/bootstrap-utilities";
+// @import 'bootstrap/scss/buttons';
+// @import 'bootstrap/scss/transitions';
+// @import 'bootstrap/scss/close';
+// @import 'bootstrap/scss/offcanvas';
+// @import 'bootstrap/scss/containers';
+
+// Optional Bootstrap Modules (w/ Dependencies)
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/code";
+// @import "bootstrap/scss/custom-forms";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/images";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/media";
+// @import 'bootstrap/scss/modal'; // Requires transitions
+// @import 'bootstrap/scss/nav';
+// @import 'bootstrap/scss/navbar'; // Requires nav
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/placeholders";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/print";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/type";

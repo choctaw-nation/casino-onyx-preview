@@ -1,0 +1,29 @@
+---
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>{title}</title>
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		<link
+			preload
+			rel="stylesheet"
+			href="https://use.typekit.net/udk7dsf.css"
+		/>
+	</head>
+
+	<body class="w-100 overflow-x-hidden">
+		<slot />
+	</body>
+</html>
+<style lang="scss" is:global>
+	// Import Bootstrap
+	@use "../styles/vendors/bootstrap-custom.scss";
+
+	// Import Base Styles
+	@use "../styles/base";
+	@use "../styles/typography";
+</style>

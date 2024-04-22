@@ -1,0 +1,68 @@
+---
+const dates = [
+	{
+		date: "Fridays, May 24 & 31",
+		times: {
+			start: "7PM",
+			end: "11PM",
+		},
+	},
+	{
+		date: "Saturdays, May 25 & June 1",
+		times: {
+			start: "2PM",
+			end: "1PM",
+		},
+	},
+	{
+		date: "Sundays, May 26 & June 2",
+		times: {
+			start: "11AM",
+			end: "7PM",
+		},
+	},
+];
+---
+
+<style lang="scss">
+	.details-grid {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: repeat(3, 1fr);
+
+		&__cell {
+			display: contents;
+			letter-spacing: 0px;
+		}
+
+		&__date {
+			padding-inline: 1rem;
+			text-align: end;
+		}
+
+		&__times {
+			text-align: end;
+			padding-inline: 1rem;
+		}
+	}
+</style>
+
+<div class="dates">
+	<ul class="list-unstyled font-serif details-grid">
+		{
+			dates.map(({ date, times }) => {
+				return (
+					<li class="details-grid__cell">
+						<span class="details-grid__date">{date}</span>
+						<span class="details-grid__separator">|</span>
+						<span class="details-grid__times">
+							<span class="font-body ms-auto">{times.start}</span>{" "}
+							to
+							<span class="font-body">{times.end}</span>
+						</span>
+					</li>
+				);
+			})
+		}
+	</ul>
+</div>

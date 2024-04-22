@@ -1,0 +1,17 @@
+---
+import { Picture } from "astro:assets";
+import imageRow from "../assets/eblast/image-row.jpg";
+
+export interface Props {
+	classes?: string;
+}
+
+const { classes = "" } = Astro.props;
+---
+
+<Picture
+	src={imageRow}
+	alt="a row of images"
+	loading="lazy"
+	class:list={["w-100", "h-100", "my-4", classes]}
+/>

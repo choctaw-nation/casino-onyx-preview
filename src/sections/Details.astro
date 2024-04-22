@@ -1,0 +1,35 @@
+---
+import BGImage from "../components/BGImage.astro";
+import bgImage from "../assets/eblast/details-bg.png";
+import ImageGrid from "../components/ImageGrid.astro";
+import DetailsGrid from "../components/DetailsGrid.astro";
+---
+
+<section class="position-relative py-5" id="details">
+	<BGImage src={bgImage} />
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10 col-lg-8">
+				<h2 class="text-black text-uppercase fs-5 my-5 text-center">
+					We've pulled out all the stops
+				</h2>
+			</div>
+		</div>
+	</div>
+	<ImageGrid />
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10 col-lg-8 d-flex flex-column align-items-center">
+				<p class="text-black text-uppercase text-center">
+					EARN ONE TIER CREDIT DURING ONE OF THE DATES AND TIMES
+					BELOW, THEN VISIT ANY CHOCTAW REWARDS CLUB KIOSK TO PRINT
+					YOUR GIFT VOUCHER REDEEM YOUR GIFT VOUCHER AT THE GRAND
+					SUMMIT IN THE GRAND CASINO. PLEASE ALLOW YOURSELF TIME TO
+					MAKE YOUR SELECTION(S) AND CHECK OUT
+				</p>
+				<hr class="border-black opacity-100 w-25" />
+				<DetailsGrid />
+			</div>
+		</div>
+	</div>
+</section>

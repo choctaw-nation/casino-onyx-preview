@@ -1,0 +1,31 @@
+---
+import { Picture } from "astro:assets";
+import logoBlack from "../assets/eblast/onyx-gift--black.svg";
+import logoWhite from "../assets/eblast/onyx-gift--white.svg";
+import eliteLogoBlack from "../assets/eblast/onyx-elite-gift--black.svg";
+import eliteLogoWhite from "../assets/eblast/onyx-elite-gift--white.svg";
+
+export interface Props {
+	type: "standard" | "elite";
+	color: "black" | "white";
+	classes?: string;
+}
+
+const { type = "standard", color = "white", classes = "" } = Astro.props;
+
+const alt = {
+	standard: "Onyx Gift Event",
+	elite: "Onyx Elite Gift Event",
+};
+
+let src = "standard" === type ? logoWhite : eliteLogoWhite;
+if ("black" === color) {
+	src = "elite" === type ? eliteLogoBlack : logoBlack;
+}
+---
+
+<Picture
+	src={src}
+	alt={alt[type]}
+	class:list={[classes, "w-100", "h-100", "object-fit-contain", "d-block"]}
+/>

@@ -1,0 +1,35 @@
+---
+import BGImage from "../components/BGImage.astro";
+import bgImage from "../assets/eblast/final-bg.png";
+import CasinoLogo from "../components/CasinoLogo.astro";
+import GiftEventLogo from "../components/GiftEventLogo.astro";
+---
+
+<style>
+	#final-cta {
+		margin-top: -1rem;
+		z-index: 2;
+	}
+</style>
+<section class="text-white position-relative py-5" id="final-cta">
+	<BGImage src={bgImage} />
+	<div class="container position-relative z-1 py-5">
+		<div class="row justify-content-center">
+			<div
+				class="col-10 col-lg-8 d-flex flex-column justify-content-center align-items-center texet-center text-uppercase text-black">
+				<hr class="w-25 opacity-100 border-black" />
+				<h2 class="fs-5 my-4 text-center">Reserve your Stay today</h2>
+				<hr class="w-25 opacity-100 border-black" />
+				<p class="fw-bold mb-5 text-center">
+					Contact your executive host today
+				</p>
+			</div>
+		</div>
+		<div class="row justify-content-center my-5">
+			<div class="col-6 d-flex flex-column row-gap-5">
+				<GiftEventLogo type="standard" color="black" />
+				<CasinoLogo color="black" />
+			</div>
+		</div>
+	</div>
+</section>

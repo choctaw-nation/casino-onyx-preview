@@ -1,0 +1,18 @@
+---
+import { Picture } from "astro:assets";
+import blackLogo from "../assets/logo-choctaw-casino-and-resorts-black-horizontal.svg";
+import whiteLogo from "../assets/logo-choctaw-casino-and-resorts-white-horizontal.svg";
+
+export interface Props {
+	color: "black" | "white";
+	classes?: string;
+}
+
+const { color, classes = "" } = Astro.props;
+---
+
+<Picture
+	src={"black" === color ? blackLogo : whiteLogo}
+	alt="Choctaw Casino & Resorts"
+	class:list={[classes, "w-100", "h-100", "object-fit-contain", "d-block"]}
+/>
