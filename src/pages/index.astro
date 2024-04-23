@@ -5,9 +5,13 @@ import Hero from "../sections/Hero.astro";
 import Details from "../sections/Details.astro";
 import BannerImage from "../sections/BannerImage.astro";
 import FinalCTA from "../sections/FinalCTA.astro";
+
+const title = import.meta.env.IS_ELITE
+	? "Onyx Elite Gift Event"
+	: "Onyx Gift Event";
 ---
 
-<BaseLayout title="Onyx Gift Event | Choctaw Casinos & Resorts">
+<BaseLayout title={`${title} | Choctaw Casinos & Resorts`}>
 	<Header />
 	<Hero />
 	<Details />

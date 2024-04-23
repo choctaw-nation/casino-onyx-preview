@@ -1,19 +1,18 @@
 {
-  "name": "casino-onyx-preview",
-  "type": "module",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "build-gift-event": "astro build --base=/uploads/onyx-gift-event",
-    "build-elite-gift-event": "astro build --base=/uploads/onyx-elite-gift-event",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^4.6.3",
-    "bootstrap": "^5.3.3",
-    "sass": "^1.75.0"
-  }
+	"name": "casino-onyx-preview",
+	"type": "module",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "IS_ELITE=false astro build --base=/uploads/onyx-gift-event",
+		"build-elite": "IS_ELITE=true astro build --base=/uploads/onyx-elite-gift-event",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"astro": "^4.6.3",
+		"bootstrap": "^5.3.3",
+		"sass": "^1.75.0"
+	}
 }

@@ -3,6 +3,7 @@ import { Picture } from "astro:assets";
 import ChoctawC from "../assets/eblast/choctaw-c.svg";
 import BGImage from "../components/BGImage.astro";
 import bgImage from "../assets/eblast/hero.jpg";
+const isElite = import.meta.env.IS_ELITE;
 ---
 
 <style lang="scss">
@@ -35,14 +36,14 @@ import bgImage from "../assets/eblast/hero.jpg";
 				<h2 class="fs-5 my-4">Elevate Your Expectations</h2>
 				<hr class="border-white opacity-100 w-25" />
 				<p class="text-white">
-					We are delighted to extend and exclusive invitation to you
-					as our distinguished onyx guest at the upcoming annual onyx
-					gifting event. Your're invited to select from 50+ gifts,
-					including housewares, spa/fitness, electronics, outdoor
-					accessories and jewelry.
+					We are delighted to extend an exclusive invitation to you as
+					our distinguished ONYX guest at the upcoming annual ONYX
+					{isElite ? "Elite" : ""} gifting event. You're invited to select
+					from 50+ gifts, including housewares, spa/fitness, electronics,
+					outdoor accessories and jewelry.
 				</p>
 				<hr class="border-white opacity-100 w-25" />
-				<p class="fw-bold">Contact your host for details</p>
+				<p class="fw-bold">Contact your executive host for details</p>
 			</div>
 		</div>
 	</div>

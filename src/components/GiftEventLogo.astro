@@ -6,13 +6,13 @@ import eliteLogoBlack from "../assets/eblast/onyx-elite-gift--black.svg";
 import eliteLogoWhite from "../assets/eblast/onyx-elite-gift--white.svg";
 
 export interface Props {
-	type: "standard" | "elite";
 	color: "black" | "white";
 	classes?: string;
 }
+const { color = "white", classes = "" } = Astro.props;
 
-const { type = "standard", color = "white", classes = "" } = Astro.props;
-
+const isElite = import.meta.env.IS_ELITE;
+const type = isElite ? "elite" : "standard";
 const alt = {
 	standard: "Onyx Gift Event",
 	elite: "Onyx Elite Gift Event",
@@ -24,8 +24,21 @@ if ("black" === color) {
 }
 ---
 
+<style>
+	.elite {
+		scale: 2;
+	}
+</style>
+
 <Picture
 	src={src}
 	alt={alt[type]}
-	class:list={[classes, "w-100", "h-100", "object-fit-contain", "d-block"]}
+	class:list={[
+		classes,
+		"w-100",
+		"h-100",
+		"object-fit-contain",
+		"d-block",
+		type === "elite" ? "elite" : "",
+	]}
 />
