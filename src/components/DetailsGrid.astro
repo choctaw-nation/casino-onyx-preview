@@ -1,30 +1,16 @@
 ---
 const dates = [
 	{
-		date: "Fridays, May 24 & 31",
+		date: 'Friday, May 24',
 		times: {
-			start: "7PM",
-			end: "11PM",
-		},
-	},
-	{
-		date: "Saturdays, May 25 & June 1",
-		times: {
-			start: "2PM",
-			end: "11PM",
-		},
-	},
-	{
-		date: "Sundays, May 26 & June 2",
-		times: {
-			start: "11AM",
-			end: "7PM",
+			start: '5PM',
+			end: '10PM',
 		},
 	},
 ];
 ---
 
-<style lang="scss">
+<style lang='scss'>
 	.details-grid {
 		display: grid;
 		grid-template-columns: auto 1fr auto;
@@ -47,18 +33,18 @@ const dates = [
 	}
 </style>
 
-<div class="dates">
-	<ul class="list-unstyled font-serif details-grid">
+<div class='dates'>
+	<ul class='list-unstyled font-serif details-grid'>
 		{
 			dates.map(({ date, times }) => {
 				return (
-					<li class="details-grid__cell">
-						<span class="details-grid__date">{date}</span>
-						<span class="details-grid__separator">|</span>
-						<span class="details-grid__times">
-							<span class="font-body ms-auto">{times.start}</span>{" "}
+					<li class='details-grid__cell'>
+						<span class='details-grid__date'>{date}</span>
+						<span class='details-grid__separator'>|</span>
+						<span class='details-grid__times'>
+							<span class='font-body ms-auto'>{times.start}</span>{' '}
 							to
-							<span class="font-body">{times.end}</span>
+							<span class='font-body'>{times.end}</span>
 						</span>
 					</li>
 				);

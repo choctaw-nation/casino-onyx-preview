@@ -1,13 +1,13 @@
 {
 	"name": "casino-onyx-preview",
 	"type": "module",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
-		"build-standard": "IS_ELITE=false astro build --base=/uploads/onyx-gift-event",
-		"build-elite": "IS_ELITE=true astro build --base=/uploads/onyx-elite-gift-event",
+		"build-standard": "IS_ELITE=false astro build --base=/uploads/onyx-grant-gift-event",
+		"build-elite": "IS_ELITE=true astro build --base=/uploads/onyx-elite-grant-gift-event",
 		"preview": "astro preview",
 		"astro": "astro"
 	},

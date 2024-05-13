@@ -1,33 +1,34 @@
 ---
-import BGImage from "../components/BGImage.astro";
-import bgImage from "../assets/eblast/details-bg.png";
-import ImageGrid from "../components/ImageGrid.astro";
-import DetailsGrid from "../components/DetailsGrid.astro";
+import BGImage from '../components/BGImage.astro';
+import bgImage from '../assets/eblast/details-bg.png';
+import ImageGrid from '../components/ImageGrid.astro';
+import DetailsGrid from '../components/DetailsGrid.astro';
 ---
 
-<section class="position-relative py-5" id="details">
+<section
+	class='position-relative py-5'
+	id='details'>
 	<BGImage src={bgImage} />
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-10 col-lg-8">
-				<h2 class="text-black text-uppercase fs-5 my-5 text-center">
+	<div class='container'>
+		<div class='row justify-content-center'>
+			<div class='col-10 col-lg-8'>
+				<h2 class='text-black text-uppercase fs-5 my-5 text-center'>
 					We've pulled out all the stops
 				</h2>
 			</div>
 		</div>
 	</div>
 	<ImageGrid />
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-10 col-lg-8 d-flex flex-column align-items-center">
-				<p class="text-black text-uppercase text-center">
-					Earn one tier credit during one of the dates and times
-					below, then visit any Choctaw Rewards Club kiosk to print
-					your gift voucher. Redeem your gift voucher at the Grand
-					Summit in the Grand Casino. Please allow yourself time to
-					make your selection(s) and check out.
+	<div class='container'>
+		<div class='row justify-content-center'>
+			<div class='col-10 col-lg-8 d-flex flex-column align-items-center'>
+				<p class='text-black text-uppercase text-center'>
+					Earn one tier credit during the time below, then visit any
+					Choctaw rewards club kiosk to print your gift voucher.
+					Redeem your gift voucher at stage 271. Please allow yourself
+					time to make your selection(s) and check out.
 				</p>
-				<hr class="border-black opacity-100 w-25" />
+				<hr class='border-black opacity-100 w-25' />
 				<DetailsGrid />
 			</div>
 		</div>

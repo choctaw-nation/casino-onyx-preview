@@ -36,4 +36,8 @@ Each build script also updates Astro's `base` config to either be `/uploads/onyx
 
 # Changelog
 
+## v1.1.0 (ONYX Gift Event &mdash; Grant)
+
+-   Basically the same as v1, but for Grant. Different URLs, event times and images.
+
 ## v1.0.0 (ONYX Gift Event)
