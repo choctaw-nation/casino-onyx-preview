@@ -1,18 +1,18 @@
 :root {
-  --font-gill-sans: gill-sans-nova, "Helvetica Neue", "Noto Sans",
-    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: grad, serif;
+	--font-gill-sans: gill-sans-nova, 'Helvetica Neue', 'Noto Sans',
+		'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-serif: 'grad', serif;
 }
 
 .left-0 {
-  left: 0;
+	left: 0;
 }
 
 .font-body {
-  font-family: var(--font-gill-sans);
+	font-family: var(--font-gill-sans);
 }
 
 .font-serif {
-  font-family: var(--font-serif);
+	font-family: var(--font-serif);
 }

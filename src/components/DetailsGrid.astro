@@ -39,12 +39,18 @@ const dates = [
 			dates.map(({ date, times }) => {
 				return (
 					<li class='details-grid__cell'>
-						<span class='details-grid__date'>{date}</span>
+						<span class='details-grid__date fst-italic'>
+							{date}
+						</span>
 						<span class='details-grid__separator'>|</span>
-						<span class='details-grid__times'>
-							<span class='font-body ms-auto'>{times.start}</span>{' '}
+						<span class='details-grid__times fst-italic'>
+							<span class='font-body ms-auto fst-normal'>
+								{times.start}
+							</span>{' '}
 							to
-							<span class='font-body'>{times.end}</span>
+							<span class='font-body fst-normal'>
+								{times.end}
+							</span>
 						</span>
 					</li>
 				);
