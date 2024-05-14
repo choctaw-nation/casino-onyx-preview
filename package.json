@@ -7,7 +7,7 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"build-standard": "IS_ELITE=false astro build --base=/uploads/onyx-grant-gift-event",
-		"build-elite": "IS_ELITE=true astro build --base=/uploads/onyx-elite-grant-gift-event",
+		"build-elite": "IS_ELITE=true astro build --base=/uploads/onyx-grant-elite-gift-event",
 		"preview": "astro preview",
 		"astro": "astro"
 	},

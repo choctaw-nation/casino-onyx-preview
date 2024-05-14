@@ -1,32 +1,38 @@
 ---
-import { Picture } from "astro:assets";
-import logoBlack from "../assets/eblast/onyx-gift--black.svg";
-import logoWhite from "../assets/eblast/onyx-gift--white.svg";
-import eliteLogoBlack from "../assets/eblast/onyx-elite-gift--black.svg";
-import eliteLogoWhite from "../assets/eblast/onyx-elite-gift--white.svg";
+import { Picture } from 'astro:assets';
+import logoBlack from '../assets/eblast/onyx-gift--black.svg';
+import logoWhite from '../assets/eblast/onyx-gift--white.svg';
+import eliteLogoBlack from '../assets/eblast/onyx-elite-gift--black.svg';
+import eliteLogoWhite from '../assets/eblast/onyx-elite-gift--white.svg';
 
 export interface Props {
-	color: "black" | "white";
+	color: 'black' | 'white';
 	classes?: string;
 }
-const { color = "white", classes = "" } = Astro.props;
+const { color = 'white', classes = '' } = Astro.props;
 
 const isElite = import.meta.env.IS_ELITE;
-const type = isElite ? "elite" : "standard";
+const type = isElite ? 'elite' : 'standard';
 const alt = {
-	standard: "Onyx Gift Event",
-	elite: "Onyx Elite Gift Event",
+	standard: 'Onyx Gift Event',
+	elite: 'Onyx Elite Gift Event',
 };
 
-let src = "standard" === type ? logoWhite : eliteLogoWhite;
-if ("black" === color) {
-	src = "elite" === type ? eliteLogoBlack : logoBlack;
+let src = 'standard' === type ? logoWhite : eliteLogoWhite;
+if ('black' === color) {
+	src = 'elite' === type ? eliteLogoBlack : logoBlack;
 }
 ---
 
 <style>
 	.elite {
 		scale: 2;
+	}
+
+	@media screen and (max-width: 576px) {
+		.elite {
+			scale: 1.75;
+		}
 	}
 </style>
 
@@ -35,10 +41,10 @@ if ("black" === color) {
 	alt={alt[type]}
 	class:list={[
 		classes,
-		"w-100",
-		"h-100",
-		"object-fit-contain",
-		"d-block",
-		type === "elite" ? "elite" : "",
+		'w-100',
+		'h-100',
+		'object-fit-contain',
+		'd-block',
+		type === 'elite' ? 'elite' : '',
 	]}
 />
