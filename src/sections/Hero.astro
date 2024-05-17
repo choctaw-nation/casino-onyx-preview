@@ -1,15 +1,15 @@
 ---
-import { Picture } from "astro:assets";
-import ChoctawC from "../assets/eblast/choctaw-c.svg";
-import BGImage from "../components/BGImage.astro";
-import bgImage from "../assets/eblast/hero.jpg";
-import eliteBgImage from "../assets/eblast/hero-elite.png";
+import { Picture } from 'astro:assets';
+import ChoctawC from '../assets/eblast/choctaw-c.svg';
+import BGImage from '../components/BGImage.astro';
+import bgImage from '../assets/eblast/hero.jpg';
+import eliteBgImage from '../assets/eblast/hero-elite.png';
 const isElite = import.meta.env.IS_ELITE;
 
 const bgSrc = isElite ? eliteBgImage : bgImage;
 ---
 
-<style lang="scss">
+<style lang='scss'>
 	#hero {
 		background-image: linear-gradient(
 			to right,
@@ -22,31 +22,34 @@ const bgSrc = isElite ? eliteBgImage : bgImage;
 		transform: translateX(-10%);
 	}
 </style>
-<section class="py-5 position-relative" id="hero">
+<section
+	class='py-5 position-relative'
+	id='hero'>
 	<BGImage src={bgSrc} />
-	<div class="container my-5">
-		<div class="row justify-content-center">
+	<div class='container my-5'>
+		<div class='row justify-content-center'>
 			<div
-				class="col-10 col-lg-5 offset-lg-7 text-center text-white d-flex flex-column align-items-center text-uppercase">
+				class='col-10 col-lg-5 offset-lg-7 text-center text-white d-flex flex-column align-items-center text-uppercase'>
 				<Picture
 					src={ChoctawC}
 					alt="Choctaw 'C' Logo"
-					class="object-fit-contain"
-					id="choctaw-c"
-					loading="lazy"
+					class='object-fit-contain'
+					id='choctaw-c'
+					loading='lazy'
 				/>
-				<hr class="border-white opacity-100 w-25" />
-				<h2 class="fs-5 my-4">Elevate Your Expectations</h2>
-				<hr class="border-white opacity-100 w-25" />
-				<p class="text-white">
+				<hr class='border-white opacity-100 w-25' />
+				<h2 class='fs-5 my-4'>Elevate Your Expectations</h2>
+				<hr class='border-white opacity-100 w-25' />
+				<p class='text-white'>
 					We are delighted to extend an exclusive invitation to you as
-					our distinguished ONYX guest at the upcoming annual ONYX
-					{isElite ? "Elite" : ""} gifting event. You're invited to select
+					our distinguished ONYX {isElite ? 'Elite' : ''} guest at the
+					upcoming annual ONYX
+					{isElite ? 'Elite' : ''} gifting event. You're invited to select
 					from 50+ gifts, including housewares, spa/fitness, electronics,
 					outdoor accessories and jewelry.
 				</p>
-				<hr class="border-white opacity-100 w-25" />
-				<p class="fw-bold">Contact your executive host for details</p>
+				<hr class='border-white opacity-100 w-25' />
+				<p class='fw-bold'>Contact your executive host for details</p>
 			</div>
 		</div>
 	</div>
